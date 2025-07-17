@@ -1107,6 +1107,11 @@
         resultatElement.textContent = "🟢 Den här skärmen behöver inte bytas. Om du trots detta ändå upplever att din skärm är tillräckligt gammal för att bytas så kan du ändå kontakta oss på sundsvall@prerep.se, alternativt telefonnummer 073 094 51 83, så kan vi dubbelkolla om ett skärmbyte är aktuellt eller ej.";
       }
     }
+    document.getElementById("skarmInput").addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      kontrolleraSkarm();
+    }
+  });
   </script>
 </body>
 </html>
