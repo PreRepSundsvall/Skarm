@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Skärmbytartest</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+    input, button { padding: 10px; margin: 10px 0; width: 100%; font-size: 1rem; }
+    #resultat { font-weight: bold; margin-top: 20px; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+  <h1>Skärmbytartest</h1>
+  <p>Skriv in namnet på din skärm:</p>
+  <input type="text" id="skarmInput" placeholder="Ex: Dell U2412M" />
+  <button onclick="kontrolleraSkarm()">Kontrollera</button>
+  <div id="resultat"></div>
+
+  <script>
+    const skarmarAttByta = [
+      "Dell U2412M",
+      "HP Z24i",
+      "Samsung SyncMaster 2443",
+      "LG Flatron W2243S",
+      "Acer V223HQ"
+    ];
+
+    function kontrolleraSkarm() {
+      const input = document.getElementById('skarmInput').value.trim().toLowerCase();
+      const resultatElement = document.getElementById('resultat');
+
+      if (!input) {
+        resultatElement.textContent = "Vänligen skriv in ett skärmnamn.";
+        return;
+      }
+
+      const skaBytas = skarmarAttByta.some(namn => namn.toLowerCase() === input);
+
+      if (skaBytas) {
+        resultatElement.textContent = "✅ Den här skärmen ska bytas.";
+      } else {
+        resultatElement.textContent = "🟢 Den här skärmen behöver inte bytas.";
+      }
+    }
+  </script>
+</body>
+</html>
