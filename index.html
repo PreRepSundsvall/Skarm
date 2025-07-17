@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
-  <title>Skärmbytartest</title>
+  <title>Skärmbyte Sundsvalls Kommun</title>
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; }
     input, button { padding: 10px; margin: 10px 0; width: 100%; font-size: 1rem; }
@@ -11,8 +11,8 @@
 </head>
 <body>
   <h1>Skärmbytartest</h1>
-  <p>Skriv in namnet på din skärm:</p>
-  <input type="text" id="skarmInput" placeholder="Ex: Dell U2412M" />
+  <p>Skriv in stöldmärkningsskyddet på din skärm (Finns att hitta på baksidan av din skärm):</p>
+  <input type="text" id="skarmInput" placeholder="Ex: IN28345" />
   <button onclick="kontrolleraSkarm()">Kontrollera</button>
   <div id="resultat"></div>
 
@@ -1102,9 +1102,9 @@
       const skaBytas = skarmarAttByta.some(namn => namn.toLowerCase() === input);
 
       if (skaBytas) {
-        resultatElement.textContent = "✅ Den här skärmen ska bytas.";
+        resultatElement.textContent = "✅ Den här skärmen ska bytas. Kontakta oss på sundsvall@prerep.se, alternativt telefonnummer 073 094 51 83, så hittar vi en tid som passar för byte av er skärm.";
       } else {
-        resultatElement.textContent = "🟢 Den här skärmen behöver inte bytas.";
+        resultatElement.textContent = "🟢 Den här skärmen behöver inte bytas. Om du trots detta ändå upplever att din skärm är tillräckligt gammal för att bytas så kan du ändå kontakta oss på sundsvall@prerep.se, alternativt telefonnummer 073 094 51 83, så kan vi dubbelkolla om ett skrämbyte är aktuellt eller ej.";
       }
     }
   </script>
