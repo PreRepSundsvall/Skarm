@@ -6,7 +6,7 @@
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; }
     input, button { padding: 10px; margin: 10px 0; width: 100%; font-size: 1rem; }
-    #resultat { font-weight: bold; margin-top: 20px; font-size: 1.2rem; }
+    #resultat { font-weight: normal; margin-top: 20px; font-size: 1.2rem; }
   </style>
 </head>
 <body>
@@ -1105,9 +1105,9 @@
       const skaBytas = skarmarAttByta.some(namn => namn.toLowerCase() === input);
 
       if (skaBytas) {
-        resultatElement.innerHTML = "✅ Den här skärmen ska bytas. <br>Kontakta oss på sundsvall@prerep.se, alternativt telefonnummer 073 094 51 83, så hittar vi en tid som passar för byte av er skärm.";
+        resultatElement.innerHTML = "✅ <strong>Den här skärmen ska bytas.</strong> <br>Kontakta oss på sundsvall@prerep.se, alternativt telefonnummer 073 094 51 83, så hittar vi en tid som passar för byte av er skärm.";
       } else {
-        resultatElement.innerHTML = "🟢 Den här skärmen behöver inte bytas. <br><br>Om du trots detta ändå upplever att din skärm är tillräckligt gammal för att bytas så kan du ändå kontakta oss på sundsvall@prerep.se, alternativt telefonnummer 073 094 51 83, så kan vi dubbelkolla om ett skärmbyte är aktuellt eller ej.";
+        resultatElement.innerHTML = "🟢 <strong>Den här skärmen behöver inte bytas.</strong> <br><br>Om du trots detta ändå upplever att din skärm är tillräckligt gammal för att bytas så kan du ändå kontakta oss på sundsvall@prerep.se, alternativt telefonnummer 073 094 51 83, så kan vi dubbelkolla om ett skärmbyte är aktuellt eller ej.";
       }
     }
     document.getElementById("skarmInput").addEventListener("keyup", function(event) {
